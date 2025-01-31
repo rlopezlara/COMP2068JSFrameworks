@@ -1,4 +1,5 @@
 ROCK, PAPER, SCISSORS GAME
+
 This is a lab exercise 2, using node console application in VS Code
 
 This lab was based on the package documentation from https://www.npmjs.com/package/prompt
