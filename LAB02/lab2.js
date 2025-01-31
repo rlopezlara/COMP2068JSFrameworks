@@ -54,7 +54,7 @@ prompt.get(['selection'], function (err, result) {
     // Check if the user's selection is valid
     const validSelection = ['rock', 'paper', 'scissors'];
     // If the user's selection is not valid, log an error and restart the game
-    if (!validSelection.includes(userSelection)) {
+    if (userSelection !== validSelection[0] && userSelection !== validSelection[1] && userSelection !== validSelection[2]) {
         console.log("Invalid selection! type the correct option.");
         startTheGame();
         return;
