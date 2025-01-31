@@ -45,6 +45,7 @@ console.log("Enter rock, paper, or scissors:");
 // Get the user's selection
 prompt.get(['selection'], function (err, result) {
     // Log the user's selection
+    
     if (err) {
         console.error(err);
         return;
