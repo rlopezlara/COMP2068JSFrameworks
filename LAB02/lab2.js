@@ -1,59 +1,73 @@
+
+//calling the prompt module
 const prompt = require('prompt');
 
-function ComputerChoice() {
+//function to generate a random choice for the computer Statistical required
+function computerSelection() {
     // Generate a number between 0 and 1
-    let randomNum = Math.random(); 
-    if (randomNum <= 0.34) {
+    let randomComputerSelection = Math.random(); 
+    // 0.34 = 34% chance of selecting paper
+    if (randomComputerSelection <= 0.34) {
         return 'paper';
-    } else if (randomNum <= 0.67) {
+    // 0.67 = 33% chance of selecting scissors
+    } else if (randomComputerSelection <= 0.67) {
         return 'scissors';
+    // 1.0 = 33% chance of selecting rock
     } else {
         return 'rock';
     }
 }
-
-function whoWin(userChoice, computerChoice) {
-    if (userChoice === computerChoice) {
+//function to determine the winner with all the possible options
+function whoWin(userSelection, computerSelection) {
+    // If the user and computer selections are the same, it's a tie
+    if (userSelection === computerSelection) {
         return "It's a tie!";
     }
-
+    // If the user wins, return "User Wins!"
     if (
-        (userChoice === 'rock' && computerChoice === 'scissors') ||
-        (userChoice === 'scissors' && computerChoice === 'paper') ||
-        (userChoice === 'paper' && computerChoice === 'rock')
+        (userSelection === 'rock' && computerSelection === 'scissors') ||
+        (userSelection === 'scissors' && computerSelection === 'paper') ||
+        (userSelection === 'paper' && computerSelection === 'rock')
     ) {
         return "User Wins!";
+        
+        // otherwise the computer wins, return "Computer Wins!"
     } else {
         return "Computer Wins!";
     }
+    
 }
 
-
-function getUserChoice() {
-
+//function to start the game
+function startTheGame() {
+// Start the prompt
 console.log("Enter rock, paper, or scissors:"); 
-
-prompt.get(['choice'], function (err, result) {
+// Get the user's selection
+prompt.get(['selection'], function (err, result) {
+    // Log the user's selection
     if (err) {
         console.error(err);
         return;
     }
-
-    const userChoice = result.choice.toLowerCase();
-    const validChoices = ['rock', 'paper', 'scissors'];
-
-    if (!validChoices.includes(userChoice)) {
-        console.log("Invalid choice! Please choose rock, paper, or scissors.");
-        getUserChoice();
+    // Convert the user's selection to lowercase
+    const userSelection = result.selection.toLowerCase();
+    // Check if the user's selection is valid
+    const validSelection = ['rock', 'paper', 'scissors'];
+    // If the user's selection is not valid, log an error and restart the game
+    if (!validSelection.includes(userSelection)) {
+        console.log("Invalid selection! type the correct option.");
+        startTheGame();
         return;
     }
-
-    const computerChoice = ComputerChoice();
-    
-    console.log(`User Selection: ${userChoice}`);
+    // Get the computer's selection
+    const computerChoice = computerSelection();
+    // Log the user and computer selections amd the winner result
+    console.log(`User Selection: ${userSelection}`);
     console.log(`Computer Selection: ${computerChoice}`);
-    console.log(whoWin(userChoice, computerChoice));
+    console.log(whoWin(userSelection, computerChoice));
 });
 }
+// Start the prompt
 prompt.start();
-getUserChoice();
+// Start the game
+startTheGame();
