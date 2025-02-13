@@ -25,7 +25,8 @@ https://getbootstrap.com/docs/5.3/components/card/
 https://getbootstrap.com/docs/5.3/components/navbar/
 * Form:
 https://getbootstrap.com/docs/5.3/forms/form-control/
-*Colours references:
+
+* Colours references:
 https://www.color-hex.com/color-palette/1041210
 
 The project has been deployed on the Render server, here is the live version:
