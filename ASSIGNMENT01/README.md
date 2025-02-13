@@ -13,7 +13,7 @@ The 6 more important projects in the diploma, are visible on my GitHub account a
 * Contact Form :
 Simple contact form, using a background image. It has not been set up correctly, due to is not part of the assignment requirement.
 
-<h2>sources </h2>
+<h2>Sources </h2>
 In this assignment, I used Bootstrap code to make it responsive, as well as some components like the card, icons and form from the Bootstrap webpage.
 I also consider some icons from the awesome icons web page.
 I consider a colour palette from the. color-hex web page.
