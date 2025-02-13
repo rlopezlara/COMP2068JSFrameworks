@@ -1,24 +1,49 @@
+/* General Styling */
 body {
   padding: 0px;
+  margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+ 
 }
-
-a {
-  color: #00B7FF;
+#name{  
+  font-size: 3.8rem;
+  color: #add80f;
+  
 }
-
+#typing-text{
+  min-height: 230px;
+}
+a,p, h1,h3,h4,label{
+  color: #ffffff;
+}
+.title{
+  color: #add80f;
+  text-shadow: #0c343d 2px 2px 2px;
+}
 header{
-  background-image: linear-gradient(180deg, #3d85c6, #073763);
-  height: auto;
+  background-image: linear-gradient(180deg, #0c343d, #073763);
+  
+}
+.nav-item a{
+   color: #ffffff;
+}
+.lead{
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.header-content {
+  background-color: #4d86b8;
 }
 .navbar-nav .nav-link {
   margin-right: 20px; /* Adjust the margin as needed */
 }
 .hoverEffect{
-  transition: text-decoration 3s ease; 
+  transition: text-decoration 5s ease;  
 }
 .hoverEffect:hover{   
-  text-decoration: underline;
+  text-decoration: underline #368f0d;  
    
 }
 .hoverEffect2{
@@ -26,22 +51,146 @@ header{
   transition: transform 1s ease; 
 }
 .hoverEffect2:hover{
-  box-shadow: 20px 20px 30px #6282e2;
+  box-shadow: 20px 20px 30px #073763;
   transform: scale(1.05);
 }
 .icons4{
   height: 36px;
   width: 36px;
-  color: #6fa8dc;
+  color: #FFA500;
 }
 .icons4:hover{
   color: #0b0c0c;
   cursor: pointer;   
   transform: scale(1.05);
 }
-
-footer{
-  background-image: linear-gradient(180deg, #0c343d, #6fa8dc);
-  height: auto;
-   
+/* Footer Styling */
+footer{   
+  background-image: linear-gradient(180deg, #0c343d, #073763);
+  height: auto;   
 }
+.footerTitle{
+  color: #add80f;
+}
+ 
+/* About page Styling  */
+.aboutMe{
+  background-color:#6fa8dc;
+  padding: 5%;
+}
+#workImg{
+    width: 50%;
+    height: auto;
+    border-radius:10% ;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px #032e5d;
+    
+}
+#profileImg{
+    width: 70%;
+    height: auto;
+    border-radius:50% ;
+    transition: transform 0.5s ease;
+    box-shadow: 4px 4px 4px #032e5d;
+    filter: grayscale(50%);
+}
+#profileImg:hover{
+  transform: scale(1.1);
+  box-shadow: 10px 8px 8px #024082;
+  filter: grayscale(0%);
+  transition: all linear 1s;
+  cursor: pointer;
+}
+.nameSpan{
+  font-weight: 700;
+  color: #0b1953;
+}
+.JobTitle{
+  color: #FFA500;
+ font-weight: 800;
+  font-size: 2.3rem;
+  text-shadow: #024082 2px 2px 2px;
+}
+.aboutMeText p{
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-align: justify;
+} 
+.workText{
+ width: 90%;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-align: justify;
+  padding: auto;
+}
+
+.skills{
+  background-image: url("/images/bg06.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10%;
+  background-attachment: fixed;   
+}
+
+/* Contact form styling */
+.contactMe{
+  background-image: url("/images/img3.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 10%;
+}
+.contactForm{
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;  
+}
+.contactForm:hover{
+  box-shadow: 10px 8px 8px #3d85c6;
+  transition: all linear 1s;
+}
+#contact-form{
+  padding: 10%;
+}
+/* Project Content */
+.projectsContent{
+  background-color: #3d85c6;
+}
+.card-body{
+  background-color:#6fa8dc;
+}
+.OpenBtn{
+  padding: 10px 15px;
+  background-color: #f4f4f4;
+  position: relative;
+  overflow: hidden;
+  background-size: 400%;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  border: none;
+  color: #0b1953;
+  font-weight: 500;
+  text-decoration: none;
+}
+.OpenBtn:hover::before{
+  transform: scaleX(1);
+}
+.OpenBtn::before{
+  content: "";
+  top: 0;
+  left: 0;    
+  position:absolute;
+  transform:scaleX(0); /* Adjusted transform */
+  transform-origin: left;
+  width: 200%;
+  height: inherit;
+  border-radius: inherit;
+  height: 100%;
+  background:linear-gradient(82.3deg, rgb(5, 112, 21) 10.8%,
+  rgb(136, 234, 123) 94.3%);  
+  transition: transform 0.8s;
+}
+.btn-content{
+  position: relative;
+  z-index: 1;
+}
+/* End */

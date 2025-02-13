@@ -1,0 +1,26 @@
+ {{!-- Contact Form --}}
+         <section class="contactMe">
+          <div class="container contactForm">
+            <div class="row mt-4">
+              <div class="col-12">
+                <h2 class="fs-1 f2-bold mt-5 text-center title">Contact Form</h2>
+              </div>
+            </div>
+            <form id="contact-form">  
+          <div class="input-group mb-4">
+            <span class="input-group-text">Name</span>
+            <input type="text" aria-label="name" class="form-control">
+          </div>
+          <div class="input-group mb-3">
+            <label for="exampleFormControlInput1" class="input-group-text">Email</label>
+            <input type="email" class="form-control" placeholder="name@example.com">
+          </div> 
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label m-2">Enter your comment</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit" onclick="handleSubmit(event)">Submit</button>
+          <input class="btn btn-primary" type="reset" value="Reset" onclick="handleReset()">
+            </form>
+        </div>
+      </section>
