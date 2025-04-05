@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+<form method="POST">
+    <fieldset>
+    {{!-- input name and id must match field name in model class --}}
+        <label for="country">Country</label>
+        <input type="text" name="country" id="country" required>
+    </fieldset>
+    <fieldset> 
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" required>
+    </fieldset>
+    <fieldset>
+        <label for="dueDate">visit Date</label>
+        <input type="date" name="visitDate"  id="visitDate" required>
+    </fieldset>
+    <fieldset>
+        <label for="course">Stars</label>       
+         <input type="number" id="stars" name="stars" min="0" max="5" step="1" required>
+    </fieldset>
+    
+    <fieldset>
+        <label for="course">Description</label>
+        <input type="text" name="description"  id="description" required>
+    </fieldset>
+    {{!-- Add button to trigger the POST event --}}
+    <button class="offset-3 btn btn-primary">Save</button>
+</form>
+    
