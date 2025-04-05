@@ -20,6 +20,9 @@ const dataSchemaObject = {
     type: String,
     default: "To do",
   },
+  imageUrl: {
+    type: String,
+  },
 };
 
 const mongooseSchema = mongoose.Schema(dataSchemaObject);

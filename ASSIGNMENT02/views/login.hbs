@@ -1,38 +1,42 @@
-<h1>
-  Login
-</h1>
-{{!-- Show error message if credentials are incorrect --}}
-{{#if messages}}
-    <div class="alert alert-danger">
-        Invalid credentials
+<section class="Login">
+  <h1 class="text-center text-white">Login</h1>
+
+  {{#if messages}}
+    <div class="alert alert-danger text-center">
+      Invalid credentials
     </div>
-{{else}}
-    <div class="alert alert-info">
-        Please enter your credentials
+  {{else}}
+    <div class="alert alert-info text-center">
+      Please enter your credentials
     </div>
-{{/if}}
-<form method="post">
-  <fieldset class="form-group">
-    <label for="username" class="col-2 control-label">
-      Username: *
-    </label>
-    <input name="username" id="username" required />
-  </fieldset>
-  <fieldset class="form-group">
-    <label for="password" class="col-2 control-label">
-      Password: *
-    </label>
-    <input name="password" id="password" type="password" required />
-  </fieldset>
-  <fieldset class="form-group">
-    <button class="btn btn-info offset-3">
-      Login
-    </button>
-    <a class="btn btn-info" href="/github"> Login with Github </a>     
-    <hr />
-    Need an account?
-    <a href="/register" title="Register">
-      Register
-    </a>
-  </fieldset>
-</form>
+  {{/if}}
+
+  <div class="loginForm">
+    <form method="post">
+      <fieldset class="form-group">
+        <label for="username" class="form-label">Username: *</label>
+        <input name="username" id="username" class="form-control" required />
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="password" class="form-label">Password: *</label>
+        <input
+          name="password"
+          id="password"
+          type="password"
+          class="form-control"
+          required
+        />
+      </fieldset>
+      <fieldset class="form-group">
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+        <a class="btn btn-dark w-100 mt-2" href="/github"><i
+            class="bi bi-github"
+          ></i>
+          Login with Github</a>
+        <hr />
+        <p class="text-center">Need an account?
+          <a href="/register" class="text-info">Register</a></p>
+      </fieldset>
+    </form>
+  </div>
+</section>

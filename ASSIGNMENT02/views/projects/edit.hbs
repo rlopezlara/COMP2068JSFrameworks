@@ -1,28 +1,71 @@
 <h1>{{title}}</h1>
-<form method="POST">
-    <fieldset>
-    {{!-- input name and id must match field name in model class --}}
-        <label for="country">Country</label>
-        <input type="text" name="country" id="country" value="{{project.country}}" required>
-    </fieldset>
-    <fieldset> 
-        <label for="city">City</label>
-        <input type="text" name="city" id="city" value="{{project.city}}" required>
-    </fieldset>
-    <fieldset>
-        <label for="dueDate">visit Date</label>
-        <input type="date" name="visitDate"  id="visitDate" value="{{toShortDate project.visitDate}}" required>
-    </fieldset>
-    <fieldset>
-        <label for="course">Stars</label>       
-         <input type="number" id="stars" name="stars" min="0" max="5" step="1" value="{{project.stars}}" required>
-    </fieldset>
-    
-    <fieldset>
-        <label for="course">Description</label>
-        <input type="text" name="description"  id="description"  value="{{project.description}}" required>
-    </fieldset>
-    {{!-- Add button to trigger the POST event --}}
-    <button class="offset-3 btn btn-primary">Update</button>
+<form method="POST" enctype="multipart/form-data">
+  <fieldset>
+    {{! input name and id must match field name in model class }}
+    <label for="country">Country</label>
+    <input
+      type="text"
+      name="country"
+      id="country"
+      value="{{project.country}}"
+      required
+    />
+  </fieldset>
+  <fieldset>
+    <label for="city">City</label>
+    <input
+      type="text"
+      name="city"
+      id="city"
+      value="{{project.city}}"
+      required
+    />
+  </fieldset>
+  <fieldset>
+    <label for="dueDate">visit Date</label>
+    <input
+      type="date"
+      name="visitDate"
+      id="visitDate"
+      value="{{toShortDate project.visitDate}}"
+      required
+    />
+  </fieldset>
+  <fieldset>
+    <label for="course">Stars</label>
+    <input
+      type="number"
+      id="stars"
+      name="stars"
+      min="0"
+      max="5"
+      step="1"
+      value="{{project.stars}}"
+      required
+    />
+  </fieldset>
+  <fieldset>
+    <label for="image">Change Image (optional)</label>
+    <input type="file" name="image" id="image" accept="image/*" />
+    {{#if project.imageUrl}}
+      <p>Current image:</p>
+      <img
+        src="{{project.imageUrl}}"
+        alt="Current Image"
+        style="max-width: 200px;"
+      />
+    {{/if}}
+  </fieldset>
+  <fieldset>
+    <label for="course">Description</label>
+    <input
+      type="text"
+      name="description"
+      id="description"
+      value="{{project.description}}"
+      required
+    />
+  </fieldset>
+  {{! Add button to trigger the POST event }}
+  <button class="offset-3 btn btn-primary">Update</button>
 </form>
-    

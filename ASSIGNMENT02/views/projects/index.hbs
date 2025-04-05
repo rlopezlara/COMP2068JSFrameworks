@@ -1,4 +1,4 @@
-<h1>{{title}}</h1>
+<h1 class="text-center text-green">{{title}}</h1>
 
 {{#if user}}
 <a href="/projects/add" class="btn btn-primary mb-4">Add a new place</a>
@@ -9,8 +9,9 @@
   <div class="card mb-5 shadow-lg">
     <div class="row g-0">
       <!-- Image Section -->
-      <div class="col-md-5">
-        <img src="{{this.imageUrl}}" class="img-fluid rounded-start h-100 object-fit-cover" alt="{{this.city}}, {{this.country}}">
+      <div class="col-md-5" style="width: 40%;">
+       <img src="{{this.imageUrl}}" class="img-fluid" alt="{{this.city}}" style="height: 300px; object-fit: cover;">
+
       </div>
 
       <!-- Content Section -->

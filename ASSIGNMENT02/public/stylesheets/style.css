@@ -1,8 +1,227 @@
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.carousel-item img {
+  width: 80%;         
+  height: 500px;       
+  object-fit: cover;   
+}
+
+ 
+/* Login section styling */
+.Login {
+  background-image: url("/extraImages/logo2.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 10%;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.loginForm {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.loginForm:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  transition: all linear 0.3s;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+form .form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+input.form-control {
+  height: 40px;
+  font-size: 1rem;
+}
+
+button, a {
+  height: 45px;
+  font-size: 1.2rem;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+.mt-2 {
+  margin-top: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+hr {
+  border-color: #ddd;
+  margin: 20px 0;
+}
+/* Register section styling */
+.Register {
+  background-image: url("/extraImages/italy.jpg"); /* Change this to your desired image */
+  background-position: center;
+  background-size: cover;
+  padding: 10%;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.registerForm {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.registerForm:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  transition: all linear 0.3s;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+form .form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+input.form-control {
+  height: 40px;
+  font-size: 1rem;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+button, a {
+  height: 45px;
+  font-size: 1.2rem;
+}
+
+.mt-2 {
+  margin-top: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+hr {
+  border-color: #ddd;
+  margin: 20px 0;
+}
+
+ /* General form section */
+.add-record {
+  background-image: url("/extraImages/Greeceimg.jpg"); /* Use your background image */
+  background-position: center;
+  background-size: cover;
+  padding: 10%;
+  min-height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Form container styling */
+.form-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Form fieldset styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  color: white;
+  font-size: 1.1em;
+}
+
+input[type="text"], input[type="date"], input[type="number"], textarea, input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Styling for the description field */
+textarea {
+  resize: vertical;
+}
+
+/* Button styling */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Form title */
+h1 {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+ 
+.add-record .form-container {
+  max-width: 600px;
+  width: 100%;
 }

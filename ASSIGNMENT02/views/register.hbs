@@ -1,51 +1,50 @@
-<h1>
-  Register
-</h1>
-<form method="post">
-  <fieldset class="form-group">
-    <label for="username" class="col-2 control-label">
-      Username: *
-    </label>
-    <input
-      name="username"
-      id="username"
-      required
-      type="email"
-      placeholder="email@email.com"
-    />
-  </fieldset>
-  <fieldset class="form-group">
-    <label for="password" class="col-2 control-label">
-      Password: *
-    </label>
-    <input
-      name="password"
-      id="password"
-      type="password"
-      required
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-    />
-  </fieldset>
-  <fieldset class="form-group">
-    <label for="confirm" class="col-2 control-label">
-      Confirm: *
-    </label>
-    <input
-      name="confirm"
-      id="confirm"
-      type="password"
-      required
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-    />
-  </fieldset>
-  <fieldset class="form-group">
-    <button class="btn btn-info offset-3">
-      Register
-    </button>
-    <hr />
-    Already have an account?
-    <a href="/login" title="Login">
-      Login
-    </a>
-  </fieldset>
-</form>
+<section class="Register">
+  <h1 class="text-center text-white">Register</h1>
+
+  <div class="registerForm">
+    <form method="post">
+      <fieldset class="form-group">
+        <label for="username" class="form-label">Username: *</label>
+        <input
+          name="username"
+          id="username"
+          type="email"
+          class="form-control"
+          required
+          placeholder="email@email.com"
+        />
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="password" class="form-label">Password: *</label>
+        <input
+          name="password"
+          id="password"
+          type="password"
+          class="form-control"
+          required
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        />
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="confirm" class="form-label">Confirm: *</label>
+        <input
+          name="confirm"
+          id="confirm"
+          type="password"
+          class="form-control"
+          required
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        />
+      </fieldset>
+
+      <fieldset class="form-group">
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+        <hr />
+        <p class="text-center">Already have an account?
+          <a href="/login" class="text-info">Login</a></p>
+      </fieldset>
+    </form>
+  </div>
+</section>

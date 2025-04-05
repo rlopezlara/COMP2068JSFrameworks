@@ -4,7 +4,7 @@ var passport = require("passport");
 var User = require("../models/user"); // Import the User model
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+  res.render("index", { title: "Home" });
 });
 
 // GET /login - page load
