@@ -1,16 +1,20 @@
-<h1 class="text-center text-green">{{title}}</h1>
+<h1 class="text-center title p-5">{{title}}</h1>
 
 {{#if user}}
-<a href="/projects/add" class="btn btn-primary mb-4">Add a new place</a>
+<div class="text-center p-4">
+  <a href="/projects/add" class="btn btn-warning"><i class="bi bi-file-earmark-plus"></i>Add a new place</a>
+
+</div>
 {{/if}}
 
 <div class="container">
   {{#each dataset}}
-  <div class="card mb-5 shadow-lg">
+  <div class="card mb-5">
     <div class="row g-0">
       <!-- Image Section -->
-      <div class="col-md-5" style="width: 40%;">
-       <img src="{{this.imageUrl}}" class="img-fluid" alt="{{this.city}}" style="height: 300px; object-fit: cover;">
+      <div class="col-md-5">
+        <img src="{{this.imageUrl}}" class="img-fluid w-100 rounded-start" alt="{{this.city}}"
+          style="height: 100%; max-height: 300px; object-fit: cover;">
 
       </div>
 
@@ -18,10 +22,15 @@
       <div class="col-md-7">
         <div class="card-body">
           <h3 class="card-title">{{this.country}} - {{this.city}}</h3>
+          <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#mapModal"
+            data-city="{{this.city}}" data-country="{{this.country}}">
+            <i class="bi bi-geo-alt-fill"></i> See on Map
+          </button>
+
           <p class="card-text"><strong>Visited on:</strong> {{toShortDate this.visitDate}}</p>
           <p class="card-text"><strong>Rating:</strong> {{this.stars}} ⭐</p>
           <p class="card-text"><strong>About the trip:</strong> {{this.description}}</p>
-          
+
           {{#if ../user}}
           <div class="mt-3">
             <a href="/projects/edit/{{this._id}}" class="btn btn-info me-2">Update</a>
@@ -33,4 +42,18 @@
     </div>
   </div>
   {{/each}}
+</div>
+<!-- Modal -->
+<div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mapModalLabel">Map Location</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="modalMap" style="height: 400px;"></div>
+      </div>
+    </div>
+  </div>
 </div>

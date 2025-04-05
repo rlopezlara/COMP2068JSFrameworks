@@ -78,6 +78,11 @@ passport.deserializeUser(User.deserializeUser());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/projects", projectsRouter);
+// serve static files for leaflet
+app.use(
+  "/leaflet",
+  express.static(path.join(__dirname, "node_modules/leaflet/dist"))
+);
 // connect to mongos
 mongoose
   .connect(configs.ConnectionStrings.MongoDB)

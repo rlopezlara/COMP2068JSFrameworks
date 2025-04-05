@@ -14,6 +14,7 @@ function isLoggedIn(req, res, next) {
 }
 
 // Configure multer storage
+// This will store the uploaded files in the public/images directory with a unique name
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "public/images/"); // store in public folder
@@ -23,6 +24,8 @@ const storage = multer.diskStorage({
     cb(null, uniqueName);
   },
 });
+// Initialize multer with the storage configuration
+// This will handle file uploads in the request body
 const upload = multer({ storage: storage });
 
 //GET/projects

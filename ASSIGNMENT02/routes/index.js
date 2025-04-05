@@ -4,7 +4,7 @@ var passport = require("passport");
 var User = require("../models/user"); // Import the User model
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Home" });
+  res.render("index", { title: "Home", user: req.user });
 });
 
 // GET /login - page load
@@ -60,7 +60,7 @@ router.get(
   "/github",
   passport.authenticate("github", { scope: ["user.email"] })
 );
-
+// GET handler for /github/callback
 router.get(
   "/github/callback",
   passport.authenticate("github", { failureRedirect: "/login" }),

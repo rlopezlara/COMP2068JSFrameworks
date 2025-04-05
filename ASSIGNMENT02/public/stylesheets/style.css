@@ -1,18 +1,42 @@
+/* body style */
 body {
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
-a {
-  color: #00B7FF;
+/* map limit height */
+#map {
+  height: 300px !important;
 }
-
+ 
+body nav{
+  background-color: #689E8A;
+  color: white;
+  padding: 10px;
+}
+/* footer styling */
+footer {
+  background-color:#689E8A;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+/* carousel styling */
 .carousel-item img {
   width: 80%;         
   height: 500px;       
   object-fit: cover;   
 }
+.title{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #689E8A; 
+ text-shadow: black 2px 2px 2px;
 
+}
+/* card styling */
+.card{
+  box-shadow: gray 2px 2px 2px;
+}
  
 /* Login section styling */
 .Login {
@@ -42,11 +66,7 @@ a {
   transition: all linear 0.3s;
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+ 
 
 form .form-group {
   margin-bottom: 15px;
@@ -73,15 +93,12 @@ button {
 .mt-2 {
   margin-top: 10px;
 }
-
-.text-center {
-  text-align: center;
-}
-
+ 
 hr {
   border-color: #ddd;
   margin: 20px 0;
 }
+
 /* Register section styling */
 .Register {
   background-image: url("/extraImages/italy.jpg"); /* Change this to your desired image */
@@ -110,48 +127,13 @@ hr {
   transition: all linear 0.3s;
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-form .form-group {
-  margin-bottom: 15px;
-}
-
-.form-label {
-  font-weight: 600;
-}
-
+ 
 input.form-control {
   height: 40px;
   font-size: 1rem;
 }
-
-button {
-  margin-bottom: 10px;
-}
-
-button, a {
-  height: 45px;
-  font-size: 1.2rem;
-}
-
-.mt-2 {
-  margin-top: 10px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-hr {
-  border-color: #ddd;
-  margin: 20px 0;
-}
-
- /* General form section */
+  
+ /* Add form section */
 .add-record {
   background-image: url("/extraImages/Greeceimg.jpg"); /* Use your background image */
   background-position: center;
@@ -193,35 +175,32 @@ input[type="text"], input[type="date"], input[type="number"], textarea, input[ty
   font-size: 1em;
 }
 
-/* Styling for the description field */
+ 
 textarea {
   resize: vertical;
 }
-
-/* Button styling */
-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Form title */
-h1 {
-  color: white;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
+  
  
 .add-record .form-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Edit record */
+.edit-record {
+  background-image: url("/extraImages/Rusia.jpg"); /* Use your background image */
+  background-position: center;
+  background-size: cover;
+  padding: 10%;
+  min-height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+ 
+.edit-record .form-container {
   max-width: 600px;
   width: 100%;
 }

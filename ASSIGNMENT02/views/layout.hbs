@@ -9,14 +9,18 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    {{!-- Bootstrap Icons --}}
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
+    {{!-- Leaflet CSS from npm  --}}
+    <link rel="stylesheet" href="/leaflet/leaflet.css" />
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    {{!-- Nav bar --}}
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"><i class="bi bi-globe-americas p-2"></i>Travel Blog</i><i
             class="bi bi-airplane p-2"
@@ -45,24 +49,25 @@
                   class="bi bi-star p-1"
                 ></i>Recommendations</a>
             </li>
+            {{!-- Is the user el Login  --}}
             {{#if user}}
               <li class="nav-item">
-                <a class="nav-link" href="#">{{user.username}}</a>
+                <a class="nav-link" href="#"><i class="bi bi-person-circle p-1"></i>{{user.username}}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="\logout"><i
                     class="bi bi-box-arrow-right p-1"
                   ></i>Logout</a>
               </li>
-            {{else}}
-              <li class="nav-item">
-                <a class="nav-link" href="\register"><i
-                    class="bi bi-code-square p-1"
-                  ></i>Register</a>
-              </li>
+            {{else}}             
               <li class="nav-item">
                 <a class="nav-link active" href="/login">
                   <i class="bi bi-person-fill p-1"></i>Login</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link" href="\register"><i
+                    class="bi bi-code-square p-1"
+                  ></i>Register</a>
               </li>
             {{/if}}
           </ul>
@@ -75,49 +80,49 @@
 
     {{! Bootstrap JS }}
     <!-- Footer Content -->
-    <footer>
+    <footer class="text-dark">
       <section class="container py-5">
         <div class="row mt-3 g-4">
           <div class="col-12 col-lg-4">
             <div class="p-3">
 
-              <h3 class="footerTitle">Location</h3>
+              <h3>Location</h3>
               <p>Barrie, Ontario</p>
             </div>
           </div>
           <div class="col-12 col-lg-4">
             <div class="p-3">
-
-              <div class="d-flex">
-                <p class="m-0 me-3"><i class="bi bi-instagram"></i>
-                </p>
-                <p class="m-0 me-3"> <i class="bi bi-facebook"></i></p>
-                <p class="m-0 me-3"><i class="bi bi-twitter"></i></p>
-                <p class="m-0 me-3"><i class="bi bi-whatsapp"></i></i></p>
+              <h3 >Social Media</h3>
+              <div>
+                <p class="m-3"> <a></a><i class="bi bi-instagram"></i></p>
+                <p class="m-3"> <i class="bi bi-facebook"></i></p>
+                <p class="m-3"><i class="bi bi-twitter"></i></p>
+                <p class="m-3"><i class="bi bi-youtube"></i></p>
               </div>
             </div>
           </div>
           <div class="col-12 col-lg-4">
             <div class="p-3">
-
-              <h3 class="footerTitle">Content</h3>
-              <p><a class="nav-link hoverEffect" href="/about">About Me </a></p>
+              <h3 >Content</h3>
               <p><a
                   class="nav-link hoverEffect"
                   href="/projects"
-                >Projects</a></p>
-              <p><a class="nav-link hoverEffect" href="/contact">Contact</a></p>
+                >Recommendations</a></p>
+              <p><a class="nav-link hoverEffect" href="#">About Me </a></p>              
+              <p><a class="nav-link hoverEffect" href="#">Contact</a></p>
+              <p><a class="nav-link hoverEffect" href="#">Policy</a></p>
             </div>
           </div>
         </div>
       </section>
     </footer>
-
+  {{!-- Scripts for JS, and Leaflet --}}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
     <script src="/javascripts/scripts.js"></script>
+    <script src="/leaflet/leaflet.js"></script>
   </body>
 </html>
