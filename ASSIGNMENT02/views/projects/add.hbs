@@ -36,17 +36,19 @@
           required
         ></textarea>
       </fieldset>
+      {{! update an image }}
       <fieldset class="form-group">
         <label for="image">Upload Image</label>
         <input type="file" name="image" id="image" accept="image/*" />
       </fieldset>
+      {{! display the Map }}
       <fieldset class="form-group">
         <label>Location Preview</label>
         <div id="map" style="height: 300px; border: 1px solid #ccc;"></div>
       </fieldset>
 
-      <button class="btn btn-primary">Save</button>
-      <a href="/projects" class="btn btn-warning ms-3">Go Back</a>
+      <button class="btn btn-success">Save</button>
+      <a href="/projects" class="btn btn-warning ms-3"> Back</a>
     </form>
   </div>
 </section>

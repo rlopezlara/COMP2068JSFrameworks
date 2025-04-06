@@ -13,7 +13,7 @@ const dataSchemaObject = {
     type: Date,
   },
   stars: {
-    type: String,
+    type: Number,
     required: true,
   },
   description: {
