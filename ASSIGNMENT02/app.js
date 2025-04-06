@@ -4,7 +4,8 @@ var path = require("path");
 const hbs = require("hbs");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-
+// Import dotenv to use environment variables
+require("dotenv").config();
 // Import configurations file and mongoose to connect to DB
 var configs = require("./configs/globals");
 var mongoose = require("mongoose");
@@ -83,16 +84,16 @@ app.use(
   "/leaflet",
   express.static(path.join(__dirname, "node_modules/leaflet/dist"))
 );
-// connect to mongos
+
+// connect to MongoDB
 mongoose
-  .connect(configs.ConnectionStrings.MongoDB)
+  .connect(process.env.CONNECTION_STRING_MONGODB)
   .then(() => {
     console.log("Connected to MongoDB!");
-  }) // success
+  })
   .catch((err) => {
     console.log("Error connecting to MongoDB!", err);
-  }); // error
-
+  });
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
